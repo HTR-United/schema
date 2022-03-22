@@ -161,6 +161,10 @@
                 }
             }
         }
+    },
+    "production-software": {
+      "description": "Name of software(s) used to create the ground truth",
+      "type": "string"
     }
   },
   "sources": {
