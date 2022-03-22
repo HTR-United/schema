@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/HTR-United/htr-united.github.io/master/assets/images/logo_htr-united.png" width=150 align=right>
+<img src="./static/img/htr-united-schema.png" width=150 align=right>
 
 # HTR-United Schema
 
