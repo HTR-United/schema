@@ -215,5 +215,5 @@
         }
     }
   },
-  "required": ["title", "description", "url", "language", "script", "time", "format", "hands", "volume", "license", "script-type", "schema"]
+  "required": ["title", "description", "url", "language", "script", "time", "format", "hands", "volume", "license", "script-type", "schema", "production-software"]
 }
