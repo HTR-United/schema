@@ -139,12 +139,17 @@
         "items": {
             "type": "object",
             "properties": {
+                "type": {
+                  "description": "Type of contributor",
+                  "type": "string",
+                  "enum": ["person", "institution"]
+                },
                 "name": {
-                    "description": "Name of the contributor",
+                    "description": "Name of the contributor, full-name for institutions",
                     "type": "string"
                 },
                 "surname": {
-                    "description": "Surname of the contributor",
+                    "description": "For people, surname of the contributor",
                     "type": "string"
                 },
                 "orcid": {
