@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://htr-united.github.io/2021-10-15/schema.json",
+  "$id": "https://htr-united.github.io/2021-04-15/schema.json",
   "title": "GroundTruthRepository",
   "description": "A description of a ground truth repository for HTR",
   "type": "object",
@@ -9,7 +9,7 @@
         "description": "Schema version used",
         "type": "string",
         "enum": [
-            "https://htr-united.github.io/schema/2021-10-15/schema.json"
+            "https://htr-united.github.io/schema/2021-04-15/schema.json"
         ]
     },
     "title": {
