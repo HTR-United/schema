@@ -169,7 +169,8 @@
                     },
                     "uniqueItems": true
                 }
-            }
+            },
+            "required": ["type", "name"]
         }
     },
     "production-software": {
