@@ -53,23 +53,26 @@
     },
     "script": {
         "description": "Script of the ground truth (Using ISO-15924)",
-        "type": "object",
-        "properties": {
-            "iso": {
-                "description": "ISO value refering to a script",
-                "type": "string",
-                "enum": [
-                      "Adlm", "Afak", "Ahom", "Hluw", "Arab", "Aran", "Armn", "Avst", "Bali", "Bamu", "Bass", "Batk", "Beng", "Bhks", "Blis", "Phlv", "Bopo", "Brah", "Brai", "Bugi", "Buhd", "Cari", "Aghb", "Cakm", "Cham", "Cher", "Chrs", "Cirt", "Zinh", "Zzzz", "Zyyy", "Zxxx", "Copt", "Xsux", "Cprt", "Cpmn", "Cyrl", "Cyrs", "Dsrt", "Deva", "Diak", "Dogr", "Dupl", "Egyd", "Egyh", "Egyp", "Elba", "Elym", "Ethi", "Geor", "Glag", "Goth", "Gran", "Grek", "Gujr", "Gong", "Guru", "Hani", "Hans", "Hant", "Hanb", "Hang", "Rohg", "Hano", "Hatr", "Hebr", "Hira", "Armi", "Inds", "Phli", "Prti", "Jamo", "Jpan", "Hrkt", "Java", "Jurc", "Kthi", "Knda", "Kana", "Kali", "Khar", "Kitl", "Kits", "Khmr", "Khoj", "Sind", "Geok", "Piqd", "Kore", "Kpel", "Laoo", "Latn", "Latf", "Latg", "Leke", "Lepc", "Limb", "Lina", "Linb", "Lisu", "Loma", "Lyci", "Lydi", "Mahj", "Maka", "Mlym", "Mand", "Mani", "Marc", "Gonm", "Zmth", "Maya", "Medf", "Mtei", "Mend", "Merc", "Mero", "Plrd", "Modi", "Mong", "Moon", "Mroo", "Mult", "Mymr", "Nbat", "Nand", "Nkdb", "Nkgb", "Talu", "Newa", "Hmnp", "Nshu", "Nkoo", "Ogam", "Olck", "Hung", "Ital", "Narb", "Perm", "Xpeo", "Sogo", "Sarb", "Orkh", "Ougr", "Orya", "Osge", "Osma", "Hmng", "Palm", "Pauc", "Phag", "Phnx", "Pcun", "Pelm", "Psin", "Phlp", "Ranj", "Rjng", "Qabx", "Qaaa", "Roro", "Runr", "Samr", "Sara", "Saur", "Shrd", "Shaw", "Shui", "Sidd", "Sgnw", "Sinh", "Sogd", "Sora", "Soyo", "Sund", "Sylo", "Zsym", "Zsye", "Syrc", "Syrn", "Syre", "Syrj", "Tglg", "Tagb", "Tale", "Lana", "Tavt", "Takr", "Taml", "Tnsa", "Tang", "Telu", "Teng", "Thaa", "Thai", "Tibt", "Tfng", "Tirh", "Toto", "Ugar", "Cans", "Vaii", "Visp", "Vith", "Wcho", "Wara", "Wole", "Yezi", "Yiii", "Zanb"
-                ]
-            },
-            "qualify":{
-                "description": "Free text to qualify the script if the ISO value is not enough",
-                "type": "string"
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "iso": {
+                    "description": "ISO value refering to a script",
+                    "type": "string",
+                    "enum": [
+                          "Adlm", "Afak", "Ahom", "Hluw", "Arab", "Aran", "Armn", "Avst", "Bali", "Bamu", "Bass", "Batk", "Beng", "Bhks", "Blis", "Phlv", "Bopo", "Brah", "Brai", "Bugi", "Buhd", "Cari", "Aghb", "Cakm", "Cham", "Cher", "Chrs", "Cirt", "Zinh", "Zzzz", "Zyyy", "Zxxx", "Copt", "Xsux", "Cprt", "Cpmn", "Cyrl", "Cyrs", "Dsrt", "Deva", "Diak", "Dogr", "Dupl", "Egyd", "Egyh", "Egyp", "Elba", "Elym", "Ethi", "Geor", "Glag", "Goth", "Gran", "Grek", "Gujr", "Gong", "Guru", "Hani", "Hans", "Hant", "Hanb", "Hang", "Rohg", "Hano", "Hatr", "Hebr", "Hira", "Armi", "Inds", "Phli", "Prti", "Jamo", "Jpan", "Hrkt", "Java", "Jurc", "Kthi", "Knda", "Kana", "Kali", "Khar", "Kitl", "Kits", "Khmr", "Khoj", "Sind", "Geok", "Piqd", "Kore", "Kpel", "Laoo", "Latn", "Latf", "Latg", "Leke", "Lepc", "Limb", "Lina", "Linb", "Lisu", "Loma", "Lyci", "Lydi", "Mahj", "Maka", "Mlym", "Mand", "Mani", "Marc", "Gonm", "Zmth", "Maya", "Medf", "Mtei", "Mend", "Merc", "Mero", "Plrd", "Modi", "Mong", "Moon", "Mroo", "Mult", "Mymr", "Nbat", "Nand", "Nkdb", "Nkgb", "Talu", "Newa", "Hmnp", "Nshu", "Nkoo", "Ogam", "Olck", "Hung", "Ital", "Narb", "Perm", "Xpeo", "Sogo", "Sarb", "Orkh", "Ougr", "Orya", "Osge", "Osma", "Hmng", "Palm", "Pauc", "Phag", "Phnx", "Pcun", "Pelm", "Psin", "Phlp", "Ranj", "Rjng", "Qabx", "Qaaa", "Roro", "Runr", "Samr", "Sara", "Saur", "Shrd", "Shaw", "Shui", "Sidd", "Sgnw", "Sinh", "Sogd", "Sora", "Soyo", "Sund", "Sylo", "Zsym", "Zsye", "Syrc", "Syrn", "Syre", "Syrj", "Tglg", "Tagb", "Tale", "Lana", "Tavt", "Takr", "Taml", "Tnsa", "Tang", "Telu", "Teng", "Thaa", "Thai", "Tibt", "Tfng", "Tirh", "Toto", "Ugar", "Cans", "Vaii", "Visp", "Vith", "Wcho", "Wara", "Wole", "Yezi", "Yiii", "Zanb"
+                    ]
+                },
+                "qualify":{
+                    "description": "Free text to qualify the script if the ISO value is not enough",
+                    "type": "string"
+                }
             },
             "required": ["iso"]
-      },
-      "uniqueItems": true,
-      "minItems": 1
+        },
+        "uniqueItems": true,
+        "minItems": 1
     },
     "script-type" : {
         "description": "Type of data",
