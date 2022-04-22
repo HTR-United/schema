@@ -66,7 +66,7 @@
                 "description": "Free text to qualify the script if the ISO value is not enough",
                 "type": "string"
             },
-            "required": ["iso"],
+            "required": ["iso"]
       },
       "uniqueItems": true,
       "minItems": 1
