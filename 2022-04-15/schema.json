@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://htr-united.github.io/2022-04-15/schema.json",
+  "$id": "https://htr-united.github.io/schema/2022-04-15/schema.json",
   "title": "GroundTruthRepository",
   "description": "A description of a ground truth repository for HTR",
   "type": "object",
@@ -150,11 +150,6 @@
         "items": {
             "type": "object",
             "properties": {
-                "type": {
-                  "description": "Type of contributor",
-                  "type": "string",
-                  "enum": ["person", "institution"]
-                },
                 "name": {
                     "description": "Name of the contributor, full-name for institutions",
                     "type": "string"
@@ -168,20 +163,48 @@
                     "type": "string",
                     "pattern": "^\\d{4}-\\d{4}-\\d{4}-\\d{4}$"
                 },
+              "roles": {
+                "description": "Roles the contributor had",
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "transcriber", "aligner", "project-manager",
+                    "support", "digitization", "quality-control",
+                    "data-provider"
+                  ]
+                },
+                "uniqueItems": true
+              }
+            },
+            "required": ["roles", "surname"]
+        }
+    },
+    "institutions": {
+        "description": "Institutions contributing to the project",
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "Full-name of the institution",
+                    "type": "string"
+                },
                 "roles": {
-                    "description": "Roles the contributor had",
-                    "type": "array",
-                    "items": {
-                        "type": "string",
-                        "enum": [
-                            "transcriber", "aligner", "project-manager", 
-                            "support", "digitization", "quality-control"
-                        ]
-                    },
-                    "uniqueItems": true
+                  "description": "Roles the contributor had",
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "transcriber", "aligner", "project-manager",
+                      "support", "digitization", "quality-control",
+                      "data-provider"
+                    ]
+                  },
+                  "uniqueItems": true
                 }
             },
-            "required": ["type", "name"]
+            "required": ["roles", "name"]
         }
     },
     "production-software": {
@@ -229,6 +252,29 @@
             "type": "string",
             "description": "URL of the Licence",
             "format": "uri"
+        }
+    }
+  },
+  "characters": {
+    "description": "Information about the character set of the dataset",
+    "type": "object",
+    "properties": {
+        "mode": {
+            "type": "string",
+            "description": "Unicode normalization",
+            "enum": ["None", "NFKC", "NFKD", "NFC", "NFD"]
+        },
+        "transliteration": {
+            "type": "bool",
+            "description": "Whether ASCII or other kind of characters are used to represent other glyphs, such as Betacode or Hieroglyphic transliteration."
+        },
+        "members": {
+            "type": "array",
+            "description": "List of characters",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
         }
     }
   },
