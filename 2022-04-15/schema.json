@@ -177,7 +177,7 @@
                 "uniqueItems": true
               }
             },
-            "required": ["roles", "surname"]
+            "required": ["surname"]
         }
     },
     "institutions": {
@@ -204,7 +204,7 @@
                   "uniqueItems": true
                 }
             },
-            "required": ["roles", "name"]
+            "required": ["name"]
         }
     },
     "production-software": {
