@@ -161,7 +161,7 @@
                 "orcid": {
                     "description": "Contributor's ORCID identifier",
                     "type": "string",
-                    "pattern": "^\\d{4}-\\d{4}-\\d{4}-\\d{4}$"
+                    "pattern": "^\\d{4}-\\d{4}-\\d{4}-[0-9]{3}[0-9X]$"
                 },
               "roles": {
                 "description": "Roles the contributor had",
