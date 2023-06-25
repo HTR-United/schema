@@ -212,6 +212,11 @@
       "type": "string"
     }
   },
+  "automatically-aligned": {
+    "description": "This flag informs us that the dataset was aligned automatically, and that it was not corrected manualy (or not completely).",
+    "type": "boolean",
+    "default": false
+  },
   "sources": {
     "description": "Sources that are present in the dataset",
     "type": "array",
