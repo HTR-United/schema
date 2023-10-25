@@ -210,8 +210,7 @@
     "production-software": {
       "description": "Name of software(s) used to create the ground truth",
       "type": "string"
-    }
-  },
+    },
   "automatically-aligned": {
     "description": "This flag informs us that the dataset was aligned automatically, and that it was not corrected manualy (or not completely).",
     "type": "boolean",
@@ -270,7 +269,7 @@
             "enum": ["None", "NFKC", "NFKD", "NFC", "NFD"]
         },
         "transliteration": {
-            "type": "bool",
+            "type": "boolean",
             "description": "Whether ASCII or other kind of characters are used to represent other glyphs, such as Betacode or Hieroglyphic transliteration."
         },
         "members": {
@@ -282,6 +281,7 @@
             "uniqueItems": true
         }
     }
+  }
   },
   "required": ["title", "description", "url", "language", "script", "time", "format", "hands", "volume", "license", "script-type", "schema", "production-software"]
 }
