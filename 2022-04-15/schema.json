@@ -265,7 +265,7 @@
             "enum": ["None", "NFKC", "NFKD", "NFC", "NFD"]
         },
         "transliteration": {
-            "type": "bool",
+            "type": "boolean",
             "description": "Whether ASCII or other kind of characters are used to represent other glyphs, such as Betacode or Hieroglyphic transliteration."
         },
         "members": {
