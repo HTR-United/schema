@@ -31,7 +31,7 @@
       "format": "uri"
     },
     "project-name": {
-      "description": "Name of the project (If different from the dataset name)",
+      "description": "Name of the project (If different from the name of the dataset)",
       "type": "string"
     },
     "project-website": {
@@ -105,7 +105,7 @@
     "format": {
         "description": "Format of the ground truth",
         "type": "string",
-        "enum": ["Alto-XML", "Page-XML", "Image-Text-Pairs"]
+        "enum": ["Alto-XML", "Page-XML", "Image-Text-Pairs", "Binary (Parquet, Arrow, ...)"]
     },
     "hands": {
         "description": "Details about the number of fonts or hands in the dataset",
